@@ -19,3 +19,6 @@
   }
 }
 ```
+
+- Once you have added your db config run the below command
+`npx sequelize db:create`
