@@ -21,3 +21,8 @@
 
 - Once you have added your db config run the below command
 `npx sequelize db:create`
+
+- To create model and migrations
+`npx sequelize model:generate --name <name> --attributes <attribute>:<datatype>`
+
+`npx sequelize db:migrate`
