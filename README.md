@@ -1,6 +1,5 @@
 # Welcome to FLights Service
 
-
 ## PRoject Setup
 - clone the project on your local
 - Execute `npm isntall` on the same path as your root directory
