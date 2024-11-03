@@ -1,10 +1,11 @@
-const { CityRepository } = require("./repository/index");
+const { CityRepository } = require("../respository/index");
 
 class CityService {
+
     constructor() {
         this.cityRepository = new CityRepository();
     }
-
+    
     async createCity(data) {
         try {
             const city = await this.cityRepository.createCity(data);
@@ -52,3 +53,5 @@ class CityService {
         
     }
 }
+
+module.exports = CityService;
