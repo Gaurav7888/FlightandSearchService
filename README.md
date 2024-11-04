@@ -26,3 +26,11 @@
 
 `npx sequelize model:generate --name <name> --attributes <attribute>:<datatype>`
 `npx sequelize db:migrate`
+
+## Tables
+
+### City -> id, name, created_at, updated_at
+### Airport -> id, name, address, city_id, created_at, updated_at
+    Realtionship -> City has many airports and airport belongs to a city (one to many)
+
+`npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer`
