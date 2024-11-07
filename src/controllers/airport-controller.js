@@ -1,15 +1,15 @@
-const { CityService } = require("../services/index");
+const { AirportService } = require("../services/index");
 
-const cityService = new CityService();
+const airportService = new AirportService();
 
 // POST 
 const create = async (req, res) => {
     try {
-        const city = await cityService.createCity(req.body);
+        const airport = await airportService.createAirport(req.body);
         return res.status(201).json({
-            data: city,
+            data: airport,
             success: true,
-            message: "Successfully Created a City",
+            message: "Successfully Created a Airport",
             err: {}
         });
     } catch (error) {
@@ -17,7 +17,7 @@ const create = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "Not testing able to create a City",
+            message: "Not testing able to create a Airport",
             err: error
         })
     }
@@ -27,11 +27,11 @@ const create = async (req, res) => {
 // Delete -> /city/id
 const destroy = async (req, res) => {
     try {
-        const response = await cityService.deleteCity(req.params.id);
+        const response = await airportService.deleteAirport(req.params.id);
         return res.status(200).json({
             data: response,
             success: true,
-            message: "Successfully deleted a City",
+            message: "Successfully deleted a Airport",
             err: {}
         });
     } catch (error) {
@@ -39,7 +39,7 @@ const destroy = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "Not able to delete a City",
+            message: "Not able to delete a Airport",
             err: error
         })
     }
@@ -49,11 +49,11 @@ const destroy = async (req, res) => {
 //GET -> /city/:id
 const get = async (req, res) => {
     try {
-        const response = await cityService.getCity(req.params.id);
+        const response = await airportService.getAirport(req.params.id);
         return res.status(200).json({
             data: response,
             success: true,
-            message: "Successfully fetch/get a City",
+            message: "Successfully fetch/get a Airport",
             err: {}
         });
     } catch (error) {
@@ -61,7 +61,7 @@ const get = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "Not able to fetch/get a City",
+            message: "Not able to fetch/get a Airport",
             err: error
         })
     }
@@ -71,11 +71,11 @@ const get = async (req, res) => {
 // PATCH -> /city/:id -> req body
 const update = async (req, res) => {
     try {
-        const response = await cityService.updateCity(req.params.id, req.body);
+        const response = await airportService.updateAirport(req.params.id, req.body);
         return res.status(200).json({
             data: response,
             success: true,
-            message: "Successfully updated a City",
+            message: "Successfully updated a Airport",
             err: {}
         });
     } catch (error) {
@@ -83,7 +83,7 @@ const update = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "Not able to update a City",
+            message: "Not able to update a Airport",
             err: error
         })
     }
@@ -93,11 +93,11 @@ const update = async (req, res) => {
 //GET -> /city/
 const getAll = async (req, res) => {
     try {
-        const cities = await cityService.getAllCities(req.query);
+        const airports = await airportService.getAllAirports(req.query);
         return res.status(200).json({
-            data: cities,
+            data: airports,
             success: true,
-            message: "Successfully fetch/get a Cities",
+            message: "Successfully fetch/get a Airports",
             err: {}
         });
     } catch (error) {
@@ -105,7 +105,7 @@ const getAll = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: "Not able to fetch teh Cities",
+            message: "Not able to fetch teh Airports",
             err: error
         })
     }

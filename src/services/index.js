@@ -3,4 +3,5 @@
 // }
 
 const CityService = require('./city-service'); 
-module.exports = { CityService };
+const AirportService = require('./airport-service'); 
+module.exports = { CityService, AirportService };
