@@ -20,7 +20,7 @@
 ```
 DB Design :-
 
-![The DB Design]()
+![The DB Design](https://github.com/Gaurav7888/FlightandSearchService/blob/master/static/Screenshot%202024-11-09%20135301.png?raw=true)
 - Once you have added your db config run the below command
 `npx sequelize db:create`
 
