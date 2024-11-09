@@ -18,7 +18,9 @@
   }
 }
 ```
+DB Design :-
 
+![The DB Design]()
 - Once you have added your db config run the below command
 `npx sequelize db:create`
 
